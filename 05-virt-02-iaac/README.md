@@ -87,8 +87,34 @@ Terraform v1.5.3
 
 - Создайте виртуальную машину.
 - Зайдите внутрь ВМ, убедитесь, что Docker установлен с помощью команды
+  
+```bash
+docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
-docker ps,
+
+```bash
+wolin@wolinubuntu:~/netology/ansible-netology$ vagrant provision
+==> server1.netology: Running provisioner: ansible...
+    server1.netology: Running ansible-playbook...
+
+PLAY [Playbook] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [server1.netology]
+
+TASK [Installing tools] ********************************************************
+ok: [server1.netology] => (item=['git', 'curl'])
+
+TASK [Installing docker] *******************************************************
+changed: [server1.netology]
+
+TASK [Add the current user to docker group] ************************************
+changed: [server1.netology]
+
+PLAY RECAP *********************************************************************
+server1.netology           : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
 ```
 Vagrantfile из лекции и код ansible находятся в [папке](https://github.com/netology-code/virt-homeworks/tree/virt-11/05-virt-02-iaac/src).
 
