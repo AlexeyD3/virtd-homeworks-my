@@ -60,6 +60,26 @@
 - Ansible.
 
 *Приложите вывод команд установленных версий каждой из программ, оформленный в Markdown.*
+```bash
+vboxmanage --version
+6.1.38_Ubuntur153438
+```
+
+```bash
+vagrant --version
+Vagrant 2.2.19
+```
+
+```bash
+ansible --version
+ansible 2.10.8
+```
+
+```bash
+terraform --version
+Terraform v1.5.3
+```
+
 
 ## Задача 4 
 
