@@ -45,39 +45,22 @@ Hey, Netology
 
 Опубликуйте созданный fork в своём репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
 
-<details>
- ```bash
- wolin@wolinubuntu:~/netology/ansible-netology/forN$ sudo docker build -t alexey/nginx-for-netology .
- [+] Building 0.1s (8/8) FINISHED                                                                                                              docker:default
-  => [internal] load .dockerignore                                                                                                                       0.0s
-  => => transferring context: 2B                                                                                                                         0.0s
-  => [internal] load build definition from Dockerfile                                                                                                    0.0s
-  => => transferring dockerfile: 107B                                                                                                                    0.0s
-  => [internal] load metadata for docker.io/library/nginx:1.24.0                                                                                         0.0s
-  => [1/3] FROM docker.io/library/nginx:1.24.0                                                                                                           0.0s
-  => [internal] load build context                                                                                                                       0.0s
-  => => transferring context: 31B                                                                                                                        0.0s
-  => CACHED [2/3] WORKDIR /usr/share/nginx/html                                                                                                          0.0s
-  => CACHED [3/3] COPY index.html .                                                                                                                      0.0s
-  => exporting to image                                                                                                                                  0.0s
-  => => exporting layers                                                                                                                                 0.0s
-  => => writing image sha256:dcf6da382a0bb0dab6e71c094e0032f4d3b034a571038e8a5279f497dffee99b                                                            0.0s
-  => => naming to docker.io/alexey/nginx-for-netology                                                                                                    0.0s
- wolin@wolinubuntu:~/netology/ansible-netology/forN$ sudo docker run -it -d -p 8080:80 alexey/nginx-for-netology
 
- be5580256463c22234a742abe1772bacc0aa31d78905b088d90a99e12474f7ae
+```bash                                                                                              
+wolin@wolinubuntu:~/netology/ansible-netology/forN$ sudo docker run -it -d -p 8080:80 devopsalexey/nginx-for-netology
+be5580256463c22234a742abe1772bacc0aa31d78905b088d90a99e12474f7ae
 
- wolin@wolinubuntu:~/netology/ansible-netology/forN$ curl http://localhost:8080
- <html>
- <head>
- Hey, Netology
- </head>
- <body>
- <h1>I’m DevOps Engineer!</h1>
- </body>
- </html>
- ```
-<details>
+wolin@wolinubuntu:~/netology/ansible-netology/forN$ curl http://localhost:8080
+<html>
+<head>
+Hey, Netology
+</head>
+<body>
+<h1>I’m DevOps Engineer!</h1>
+</body>
+</html>
+```
+
 
 > https://hub.docker.com/layers/devopsalexey/nginx-for-netology/latest/images/sha256-f5e2e903b0ea91d134ecd3bd28c01a43ade553a8d002bb629c383221647ff7f3?tab=layers
 
