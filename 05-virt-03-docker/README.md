@@ -109,6 +109,31 @@ Hey, Netology
 - Добавьте ещё один файл в папку ```/data``` на хостовой машине.
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
 
+> Как выполнял:
+```bash
+mkdir data
+
+sudo docker pull centos:centos7
+sudo docker run --name centos -td -v "$(pwd)"/data:/data centos:centos7
+
+sudo docker pull debian:stable-slim
+sudo docker run --name debian -td -v "$(pwd)"/data:/data debian:stable-slim
+
+sudo docker exec -ii centos bash
+  echo 321 > file1.txt
+  exit
+
+echo onhost > "$(pwd)"/data/fileH.txt
+
+sudo docker exec -ii --workdir /data debian bash
+  cat *
+    321
+    onhost
+  ls  
+    file1.txt
+    fileH.txt
+```
+
 ## Задача 4 (*)
 
 Воспроизведите практическую часть лекции самостоятельно.
