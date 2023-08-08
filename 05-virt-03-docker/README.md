@@ -44,8 +44,8 @@ Hey, Netology
 ```
 
 Опубликуйте созданный fork в своём репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
+
 <details>
- <summary>Вывод консоли</summary>
  ```bash
  wolin@wolinubuntu:~/netology/ansible-netology/forN$ sudo docker build -t alexey/nginx-for-netology .
  [+] Building 0.1s (8/8) FINISHED                                                                                                              docker:default
@@ -79,6 +79,7 @@ Hey, Netology
  ```
 <details>
 
+> https://hub.docker.com/layers/devopsalexey/nginx-for-netology/latest/images/sha256-f5e2e903b0ea91d134ecd3bd28c01a43ade553a8d002bb629c383221647ff7f3?tab=layers
 
 ## Задача 2
 
