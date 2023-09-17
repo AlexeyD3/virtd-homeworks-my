@@ -28,9 +28,13 @@
 
 Чтобы получить зачёт, вам нужно предоставить скриншот страницы с созданным образом из личного кабинета YandexCloud.
 
+![screenshot](https://i.ibb.co/w6WPyF2/Screenshot-from-2023-09-17-22-29-01.png)
+
 ## Задача 2
 
-**2.1.** Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud.        
+**2.1.** Создайте вашу первую виртуальную машину в YandexCloud с помощью web-интерфейса YandexCloud.
+
+![screenshot](https://i.ibb.co/MnqCkd1/Screenshot-from-2023-09-17-14-37-00.png)        
 
 **2.2.*** **(Необязательное задание)**      
 Создайте вашу первую виртуальную машину в YandexCloud с помощью Terraform (вместо использования веб-интерфейса YandexCloud).
@@ -38,12 +42,30 @@
 
 Чтобы получить зачёт, вам нужно предоставить вывод команды terraform apply и страницы свойств, созданной ВМ из личного кабинета YandexCloud.
 
+![screenshot](https://i.ibb.co/Y35yLMV/Screenshot-from-2023-09-17-17-16-27.png)  
+![screenshot](https://i.ibb.co/jTvFzPh/Screenshot-from-2023-09-17-22-27-54.png)  
+
 ## Задача 3
 
 С помощью Ansible и Docker Compose разверните на виртуальной машине из предыдущего задания систему мониторинга на основе Prometheus/Grafana.
 Используйте Ansible-код в директории ([src/ansible](https://github.com/netology-group/virt-homeworks/tree/virt-11/05-virt-04-docker-compose/src/ansible)).
 
 Чтобы получить зачёт, вам нужно предоставить вывод команды "docker ps" , все контейнеры, описанные в [docker-compose](https://github.com/netology-group/virt-homeworks/blob/virt-11/05-virt-04-docker-compose/src/ansible/stack/docker-compose.yaml),  должны быть в статусе "Up".
+
+```bash
+wolin@wolinubuntu:~$ ssh -i ~/.ssh/id_rsa centos@62.84.118.4
+[centos@node01 ~]$ sudo docker ps
+CONTAINER ID   IMAGE                              COMMAND                  CREATED          STATUS                    PORTS                                                                              NAMES
+eee8c7312aff   prom/node-exporter:v0.18.1         "/bin/node_exporter …"   18 minutes ago   Up 18 minutes             9100/tcp                                                                           nodeexporter
+efc22f3854d5   prom/pushgateway:v1.2.0            "/bin/pushgateway"       18 minutes ago   Up 18 minutes             9091/tcp                                                                           pushgateway
+d1612fb3c2cc   stefanprodan/caddy                 "/sbin/tini -- caddy…"   18 minutes ago   Up 18 minutes             0.0.0.0:3000->3000/tcp, 0.0.0.0:9090-9091->9090-9091/tcp, 0.0.0.0:9093->9093/tcp   caddy
+9fd014fc93ef   prom/alertmanager:v0.20.0          "/bin/alertmanager -…"   18 minutes ago   Up 18 minutes             9093/tcp                                                                           alertmanager
+f017af3fda7c   gcr.io/cadvisor/cadvisor:v0.47.0   "/usr/bin/cadvisor -…"   18 minutes ago   Up 18 minutes (healthy)   8080/tcp                                                                           cadvisor
+6d3bdb5b8faa   grafana/grafana:7.4.2              "/run.sh"                18 minutes ago   Up 18 minutes             3000/tcp                                                                           grafana
+ae98b8f6bb96   prom/prometheus:v2.17.1            "/bin/prometheus --c…"   18 minutes ago   Up 18 minutes             9090/tcp                                                                           prometheus
+[centos@node01 ~]$ 
+
+```
 
 ## Задача 4
 
@@ -54,9 +76,9 @@
 
 Чтобы получить зачёт, предоставьте: 
 
-- скриншот работающего веб-интерфейса Grafana с текущими метриками, как на примере ниже.
+- скриншот работающего веб-интерфейса Grafana с текущими метриками
 <p align="center">
-  <img width="1200" height="600" src="./assets/yc_02.png">
+  <img width="1200" height="600" src="https://i.ibb.co/pRsCdNS/Screenshot-from-2023-09-17-22-26-47.png">
 </p>
 
 ## Задача 5 (*)
