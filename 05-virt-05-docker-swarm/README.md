@@ -52,7 +52,7 @@
 docker node ls
 ```
 
-[screenshot](https://i.ibb.co/vd23XYM/Screenshot-from-2023-09-18-13-21-40.png)
+![screenshot](https://i.ibb.co/vd23XYM/Screenshot-from-2023-09-18-13-21-40.png)
 
 ## Задача 3
 
@@ -63,7 +63,7 @@ docker node ls
 docker service ls
 ```
 
-[screenshot](https://i.ibb.co/4Vms4CQ/Screenshot-from-2023-09-18-13-23-34.png)
+![screenshot](https://i.ibb.co/4Vms4CQ/Screenshot-from-2023-09-18-13-23-34.png)
 
 ## Задача 4 (*)
 
@@ -72,5 +72,6 @@ docker service ls
 # см.документацию: https://docs.docker.com/engine/swarm/swarm_manager_locking/
 docker swarm update --autolock=true
 ```
-
+> Эта команда шифрует ключи TSL и журналы Raft хранящиеся у каждого экземпляра менеджера кластера (и у каждого вновь добавленного менеджера), пока Docker находится в состоянии покоя. Это делается в том числе для того, чтобы обеспечить использование Docker-secrets, который хранит конфиденциальные данные в журнале Raft.
+При каждом перезапуске Docker-swarm будет необходимо ввести ключ для разблокировки вручную.
 
